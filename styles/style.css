@@ -1,0 +1,144 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN NORMALIZE.CSS)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+body {
+    font-family: 'Marcellus', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #31302f;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Black ops one', sans-serif;
+    text-transform: uppercase;
+}
+
+/*-------------------------------------------
+Elements
+--------------------------------------------- */
+
+/*------------------------------------------- 
+Links
+--------------------------------------------- */
+a,
+a:visited {
+    color: #31302f;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #a52a2a;
+}
+
+a:focus,
+a:active {
+    border: solid 0.1rem #31302f;   
+    padding: 0.2rem;
+}
+
+/*-------------------------------------------
+# Layout
+----------------------------------------------*/
+body {
+    background-color: #ffffff;
+}
+
+/* Header
+--------------------------------------------- */
+.site-header {
+    background-color: #ffffff;
+}
+
+.site-name {
+    display: none;
+}
+
+.site-navigation {
+    font-family: 'black han sans', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    font-size: 1.5rem;
+    height: 5rem;
+    align-items: center;
+}
+
+.site-navigation ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    padding: .25rem;
+    margin: .25rem;
+}
+
+/* Main
+--------------------------------------------- */
+/* Page Header */
+.page-header {
+	position: relative;
+}
+
+.page-header h1 {
+	position: absolute;
+    font-family: 'Black ops one','Times New Roman', Times, serif;
+	top: 50%;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	transform: translateY(-50%);
+	margin: 0;
+	font-size: 3rem;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.page-header img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.section-title {
+    background-color: #31302f;
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.projects-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
