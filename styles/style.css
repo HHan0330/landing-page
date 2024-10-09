@@ -34,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Black ops one', sans-serif;
+    font-family: 'Black han sans', sans-serif;
     text-transform: uppercase;
 }
 
@@ -108,7 +108,11 @@ body {
 	position: relative;
 }
 
-/* .page-header h1 {
+.site-main img {
+    height: 20rem;
+}
+
+.page-header h1 {
 	position: absolute;
     font-family: 'Black ops one','Times New Roman', Times, serif;
 	top: 50%;
@@ -121,28 +125,50 @@ body {
 	color: #ffff00;
 	text-transform: uppercase;
 	text-align: center;
-} */
-
-.section-title {
-    background-color: #000000;
-    color: #ffff00;
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 1rem;
-    border: solid .5rem #ffff00;
 }
 
 .projects-title {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 1rem;
+    margin: 1rem 2rem;
+    padding: 1rem;
 }
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+    background-color: #ffff00;
+}
+
+.about-section h2 {
+    align-self: center;
+    font-size: 2rem;
+    margin-top: .5rem;
+    margin-bottom: 0;
+}
+
+.about-section p {
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 
 /* Sections
 --------------------------------------- */
 
 .projects-section {
     padding: 1.8rem 2rem;
+}
+
+.projects-section img {
+    height: auto;
 }
 
 .projects-wrapper {
@@ -172,24 +198,37 @@ body {
     border: dotted .5rem yellow;
 }
 
-/* .projects-item p {
+.projects-item p {
     font-size: 1rem;
     line-height: 1rem;
     text-align: center;
     margin-top: .5rem;
-    margin-bottom: .5rem;
-} */
+    margin-bottom: .75rem;
+}
 
 .projects-item a {
     display: flex;
-    font-family: 'Black ops one', Arial, Helvetica, sans-serif;
+    font-family: 'black han sans', Arial, Helvetica, sans-serif;
     background-color: #ffff00;
-    width: fit-content;
+    width: 12rem;
     margin: 0 auto;
-    padding: .5rem .5rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #000000;
     line-height: bold;
     text-transform: uppercase;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
+    justify-content: center;
+    letter-spacing: .5rem;
+}
+
+/* Footer
+--------------------------------------------- */
+
+.site-footer {
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    border-top: solid .25rem #ffff00;
 }
