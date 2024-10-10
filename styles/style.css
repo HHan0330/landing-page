@@ -25,7 +25,7 @@ body {
     font-family: 'Marcellus', Arial, Helvetica, sans-serif;
     font-size: 1rem;
     line-height: 1.5;
-    color: yellow;
+    color: #ffff00;
 }
 
 h1,
@@ -83,7 +83,6 @@ body {
     font-family: 'black han sans', sans-serif;
     display: flex;
     justify-content: space-around;
-    padding: 0;
     font-size: 1.5rem;
     height: 5rem;
     align-items: center;
@@ -127,24 +126,18 @@ body {
 	text-align: center;
 }
 
-.projects-title {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 1rem;
-    margin: 1rem 2rem;
-    padding: 1rem;
-}
-
+/* Sections
+--------------------------------------- */
 .about-section {
     display: flex;
     flex-direction: column;
-    color: #000000;
-    background-color: #ffff00;
+    color: #ffff00;
 }
 
 .about-section h2 {
+    text-transform: uppercase;
     align-self: center;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-top: .5rem;
     margin-bottom: 0;
 }
@@ -153,15 +146,10 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-    margin-top: 0;
-    margin-bottom: .5rem;
+    margin: 0 auto;
     padding-left: 1rem;
     padding-right: 1rem;
 }
-
-
-/* Sections
---------------------------------------- */
 
 .projects-section {
     padding: 1.8rem 2rem;
@@ -181,11 +169,16 @@ body {
     margin: 0 auto;
 }
 
+.projects-title {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    text-align: center;
+}
+
 .projects-name {
     font-size: 1.5rem;
     text-align: center;
     line-height: 2rem;
-    color: #ffff00;
     margin: 0 0 .5rem 0;
 }
 
@@ -223,7 +216,6 @@ body {
 
 /* Footer
 --------------------------------------------- */
-
 .site-footer {
     display: block;
     text-align: left;
@@ -231,4 +223,73 @@ body {
     padding-left: 2rem;
     font-size: 1.5rem;
     border-top: solid .25rem #ffff00;
+}
+
+@media (min-width: 50em) {
+
+    .site-header {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 5rem;
+    }
+    
+    .site-name {
+        display: none;
+    }
+
+    .section-title {
+        color: #ffff00;
+        padding-bottom: .5rem;
+    }
+
+    .site-main img {
+        height: 50rem;
+    }
+
+    .site-navigation ul {
+        font-size: 2rem;
+    }
+
+    .page-header h1 {
+        top: 35%;
+        right: 0;
+    }
+
+    .about-section p {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        max-width: 50rem;
+        text-align: left;
+        color: #ffff00;
+        border: solid .5rem #ffff00;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+    
+    .projects-section {
+        padding-bottom: 5rem;
+    }
+
+    .projects-title {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .projects-section img {
+        height: auto;
+    }
+
+    .projects-item {
+        width: 15rem;
+    }
+
+    .projects-text {
+        width: fit-content;
+        text-align: center;
+    }
+
+    .site-footer {
+        text-align: center;
+    }
+
 }
