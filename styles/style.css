@@ -1,31 +1,10 @@
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Generic (CALLED IN NORMALIZE.CSS)
-	- Normalize
-	- Box sizing
-	- Media width
-# Base
-	- Typography
-	- Elements
-	- Links
-# Layouts
-# Components
-	- Header
-	- Main
-	- Footer
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
-
-/* Typography
---------------------------------------------- */
 body {
     font-family: 'Marcellus', Arial, Helvetica, sans-serif;
     font-size: 1rem;
     line-height: 1.5;
     color: #ffff00;
+    background-color: #000000;
+    margin: 0;
 }
 
 h1,
@@ -45,7 +24,7 @@ Elements
 /*------------------------------------------- 
 Links
 --------------------------------------------- */
-a,
+/* a,
 a:visited {
     color: #ffff00;
     text-decoration: none;
@@ -59,45 +38,51 @@ a:focus,
 a:active {
     border: solid 0.1rem #ffff00;
     padding: 0.2rem;
+} */
+
+a {
+    text-decoration: none;
+    color: #ffff00;
 }
 
-/*-------------------------------------------
-# Layout
-----------------------------------------------*/
-body {
-    background-color: #000000;
-}
+/* Header
+------------------------------------------ */
 
-/* Header   
---------------------------------------------- */
 .site-header {
-    background-color: #000000;
-    border-bottom: solid .25rem yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .site-name {
     display: none;
 }
 
-.site-navigation {
-    font-family: 'black han sans', sans-serif;
-    display: flex;
-    justify-content: flex-end;
-    font-size: 1.5rem;
-    height: 5rem;
-    align-items: center;
-}
-
-.site-navigation ul {
+.nav-menu {
     display: flex;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    font-size: 22px;
+    font-family: 'black han sans', 'Times New Roman', Times, serif ;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    border-bottom: 4px solid #ffff00;
+    text-transform: uppercase;
 }
 
 .nav-menu li {
-    padding: .25rem;
-    margin: .25rem;
+    padding: 4px 8px;
+}
+
+.nav-menu {
+    padding: 10px 12px;
+}
+
+.nav-menu li:hover {
+    background-color: #d49466;
+    border-radius: 4px;
 }
 
 /* Main
@@ -228,33 +213,69 @@ body {
 }
 
 /* media query start -------------------------
----------------------------------------------*/ 
-@media (min-width: 50em) {
+---------------------------------------------*/
+@media (min-width: 800px) {
 
-/* Header 
+    /* Header 
 ---------------------------------------------*/
     .site-header {
-        display: grid;
-        grid-template-columns: 1fr minmax(auto, 25rem) minmax(auto, 37.5rem) 1fr;
-    }
-
-    .site-navigation ul {
         display: flex;
-        justify-content: flex-end;
-        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 12px;
+        border-bottom: 4px solid #ffff00;
     }
 
-    a.site-name {
-        display: inline-block;
-        grid-column: 2 / 3;
-        text-decoration: none;
+    .nav-menu {
+        display: flex;
+        border-bottom: none;
+    }
+
+    .site-name {
+        display: block;
+        font-size: 24px;
         font-family: 'Yellowtail', 'Times New Roman', Times, serif;
-        font-size: 2rem;
-        padding: 1rem 0;
+        color: #ffffff;
+        padding-left: 30px;
+        text-shadow:    
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px rgb(244, 219, 60),
+            0 0 82px rgb(244, 219, 60),
+            0 0 92px rgb(244, 219, 60),
+            0 0 102px rgb(244, 219, 60),
+            0 0 151px rgb(244, 219, 60);
     }
 
+    @keyframes flicker {
 
-/* Main
+        0%,
+        16%,
+        26%,
+        30%,
+        58%,
+        64%,
+        100% {
+            text-shadow:
+                0 0 7px #fff,
+                0 0 10px rgb(244, 219, 60),
+                0 0 21px rgb(244, 219, 60),
+                0 0 42px rgb(244, 219, 60),
+                0 0 82px rgb(244, 219, 60),
+                0 0 92px rgb(244, 219, 60),
+                0 0 102px rgb(244, 219, 60),
+                0 0 151px rgb(244, 219, 60);
+        }
+
+        22%,
+        28%,
+        60% {
+            text-shadow: none;
+        }
+    }
+
+    /* Main
  --------------------------------------------*/
 
     .section-title {
@@ -264,19 +285,15 @@ body {
 
     .site-main img {
         width: 100%;
-        height: 35rem;
-    }
-
-    .site-navigation ul {
-        font-size: 2rem;
+        height: 100dvh;
     }
 
     .page-header h1 {
-        top: 35%;
+        top: 20%;
         right: 0;
     }
 
-/* Section
+    /* Section
  -------------------------------------------*/
     .about-section p {
         font-size: 1.5rem;
@@ -311,7 +328,7 @@ body {
         text-align: center;
     }
 
-/* footer
+    /* footer
  --------------------------------------------*/
     .site-footer {
         text-align: center;
